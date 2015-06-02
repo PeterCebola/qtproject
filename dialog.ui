@@ -1,0 +1,1017 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>726</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="loadImage">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Load Image</string>
+   </property>
+  </widget>
+  <widget class="mouse_qlabel" name="imageContainerLabel">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>10</y>
+     <width>911</width>
+     <height>701</height>
+    </rect>
+   </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="lineWidth">
+    <number>2</number>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="functionChoice">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>10</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Take Photo</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Original</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Grayscale</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Edge Detection (Canny)</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Hough Circle Detection</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Contour Detection</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Hole Detection</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Get Target Info</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QSlider" name="hough1Slider">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>380</y>
+     <width>171</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QSlider" name="hough2Slider">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>470</y>
+     <width>171</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>2048</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QSlider" name="hough3Slider">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>560</y>
+     <width>171</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>2048</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="hough1Label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>330</y>
+     <width>121</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Ratio Resolution</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="hough2Label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>420</y>
+     <width>121</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Canny Threshold</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="hough3Label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>510</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Accumulator Thresh</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="hough4lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>350</y>
+     <width>113</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="hough5lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>410</y>
+     <width>113</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="hough4Label">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>330</y>
+     <width>121</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Min Radius</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="hough5Label">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>390</y>
+     <width>121</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Max Radius</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="confirmPushButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>111</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Confirm</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="hough6lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>470</y>
+     <width>113</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="hough6Label">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>450</y>
+     <width>131</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Min Circle Distance</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="printValuesPushButton">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>100</y>
+     <width>111</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Print Values</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pixelCoordinateLabel">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>690</y>
+     <width>101</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>X = 0     Y = 0</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="hough1lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>350</y>
+     <width>113</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="hough2lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>440</y>
+     <width>113</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="hough3lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>530</y>
+     <width>113</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPictureLabel" name="testLabel">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>10</y>
+     <width>901</width>
+     <height>701</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="lineWidth">
+    <number>2</number>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="contours1lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>350</y>
+     <width>113</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="contours1Label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>330</y>
+     <width>121</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Number of Points</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="radiusCalcPushButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>160</y>
+     <width>111</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Radius Calc</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="centerCalcPushButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>130</y>
+     <width>111</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Center Calc</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="exportPushButton">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>100</y>
+     <width>111</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Export</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="leastSquareFitPushButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>190</y>
+     <width>111</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>LSQ Fit</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="holeDetect1lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>250</y>
+     <width>61</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="holeDetect2lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>250</y>
+     <width>61</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="holeDetect3lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>250</y>
+     <width>61</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="holeDetect1Label">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>230</y>
+     <width>21</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>  H</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="holeDetect2Label">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>230</y>
+     <width>21</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>  S</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="holeDetect3Label">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>230</y>
+     <width>21</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>  V</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="keepDataCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>50</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Keep Data</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="holeDetect3lineEdit_2">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>280</y>
+     <width>61</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="holeDetect1lineEdit_2">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>280</y>
+     <width>61</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="holeDetect2lineEdit_2">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>280</y>
+     <width>61</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="holeDetect4Label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>250</y>
+     <width>31</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Max</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="holeDetect5Label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>280</y>
+     <width>31</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Min</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="holeDetectHTPushButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>130</y>
+     <width>111</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Find Hole (HT)</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="holeDetectCPushButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>160</y>
+     <width>111</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Find Hole (C)</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="holeDetectHT5lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>410</y>
+     <width>113</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="holeDetectHT3lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>530</y>
+     <width>113</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="holeDetectHT4lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>350</y>
+     <width>113</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="holeDetectHT1lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>350</y>
+     <width>113</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QSlider" name="holeDetectHT2Slider">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>470</y>
+     <width>171</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>2048</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="holeDetectHT6lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>470</y>
+     <width>113</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="holeDetectHT2lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>440</y>
+     <width>113</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QSlider" name="holeDetectHT1Slider">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>380</y>
+     <width>171</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QSlider" name="holeDetectHT3Slider">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>560</y>
+     <width>171</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>2048</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="holeDetectSplitPushButton">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>130</y>
+     <width>111</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Split OL Holes</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="holeDetectSplit1lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>530</y>
+     <width>113</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="holeDetect6Label">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>510</y>
+     <width>121</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Min Area</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="holeDetect7Label">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>570</y>
+     <width>121</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Max Area</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="holeDetectSplit2lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>590</y>
+     <width>113</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="savePushButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>130</y>
+     <width>111</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="holeDetect8Label">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>630</y>
+     <width>131</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Min Convex Defect</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="holeDetectSplit3lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>650</y>
+     <width>113</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="infoPlainTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>220</y>
+     <width>321</width>
+     <height>471</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="targetChoice">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>50</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>300m Rifle</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>50m Rifle</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>10m Air Rifle</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>50m Pistol / 25m Precision</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>25m Center Fire Pistol</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>10m Air Pistol</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>SCAT</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="cameraPushButton">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>100</y>
+     <width>111</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Camera Test</string>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="info2PlainTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>600</y>
+     <width>171</width>
+     <height>101</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="setupCameraPushButton">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>130</y>
+     <width>111</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Setup</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="resetValuesPushButton">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>190</y>
+     <width>111</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Reset Values</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="getDepthDataPushButton">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>160</y>
+     <width>111</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Get Depth Data</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="fixPerspectivePushButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>190</y>
+     <width>111</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Fix Perspective</string>
+   </property>
+  </widget>
+  <zorder>targetChoice</zorder>
+  <zorder>infoPlainTextEdit</zorder>
+  <zorder>loadImage</zorder>
+  <zorder>imageContainerLabel</zorder>
+  <zorder>functionChoice</zorder>
+  <zorder>hough1Slider</zorder>
+  <zorder>hough2Slider</zorder>
+  <zorder>hough3Slider</zorder>
+  <zorder>hough1Label</zorder>
+  <zorder>hough2Label</zorder>
+  <zorder>hough3Label</zorder>
+  <zorder>hough4lineEdit</zorder>
+  <zorder>hough5lineEdit</zorder>
+  <zorder>hough4Label</zorder>
+  <zorder>hough5Label</zorder>
+  <zorder>confirmPushButton</zorder>
+  <zorder>hough6lineEdit</zorder>
+  <zorder>hough6Label</zorder>
+  <zorder>printValuesPushButton</zorder>
+  <zorder>pixelCoordinateLabel</zorder>
+  <zorder>hough1lineEdit</zorder>
+  <zorder>hough2lineEdit</zorder>
+  <zorder>hough3lineEdit</zorder>
+  <zorder>testLabel</zorder>
+  <zorder>contours1lineEdit</zorder>
+  <zorder>contours1Label</zorder>
+  <zorder>radiusCalcPushButton</zorder>
+  <zorder>centerCalcPushButton</zorder>
+  <zorder>exportPushButton</zorder>
+  <zorder>leastSquareFitPushButton</zorder>
+  <zorder>holeDetect1lineEdit</zorder>
+  <zorder>holeDetect2lineEdit</zorder>
+  <zorder>holeDetect3lineEdit</zorder>
+  <zorder>holeDetect1Label</zorder>
+  <zorder>holeDetect2Label</zorder>
+  <zorder>holeDetect3Label</zorder>
+  <zorder>keepDataCheckBox</zorder>
+  <zorder>holeDetect3lineEdit_2</zorder>
+  <zorder>holeDetect1lineEdit_2</zorder>
+  <zorder>holeDetect2lineEdit_2</zorder>
+  <zorder>holeDetect4Label</zorder>
+  <zorder>holeDetect5Label</zorder>
+  <zorder>holeDetectHTPushButton</zorder>
+  <zorder>holeDetectCPushButton</zorder>
+  <zorder>holeDetectHT5lineEdit</zorder>
+  <zorder>holeDetectHT3lineEdit</zorder>
+  <zorder>holeDetectHT4lineEdit</zorder>
+  <zorder>holeDetectHT1lineEdit</zorder>
+  <zorder>holeDetectHT2Slider</zorder>
+  <zorder>holeDetectHT6lineEdit</zorder>
+  <zorder>holeDetectHT2lineEdit</zorder>
+  <zorder>holeDetectHT1Slider</zorder>
+  <zorder>holeDetectHT3Slider</zorder>
+  <zorder>holeDetectSplitPushButton</zorder>
+  <zorder>holeDetectSplit1lineEdit</zorder>
+  <zorder>holeDetect6Label</zorder>
+  <zorder>holeDetect7Label</zorder>
+  <zorder>holeDetectSplit2lineEdit</zorder>
+  <zorder>savePushButton</zorder>
+  <zorder>holeDetect8Label</zorder>
+  <zorder>holeDetectSplit3lineEdit</zorder>
+  <zorder>cameraPushButton</zorder>
+  <zorder>info2PlainTextEdit</zorder>
+  <zorder>setupCameraPushButton</zorder>
+  <zorder>resetValuesPushButton</zorder>
+  <zorder>getDepthDataPushButton</zorder>
+  <zorder>fixPerspectivePushButton</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>mouse_qlabel</class>
+   <extends>QLabel</extends>
+   <header location="global">mouse_qlabel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QPictureLabel</class>
+   <extends>QLabel</extends>
+   <header>qpicturelabel.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
